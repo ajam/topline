@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+ 
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge;chrome=1" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width" />
+
+  <link rel="stylesheet" href="../css/styles.css">
+  <script src="js/underscore-min.js"></script>
+  <script src="js/jquery-2.1.1.min.js"></script>
+  <script src="js/raphael.js"></script>
+
+  <!-- Bring your own copy of jQuery/Underscore/Raphael here -->
+  <!-- To support IE < 9, include jQuery 1.x -->
+
+  <!-- Load the states package -->
+  <script src="js/states_packaged.js"></script>
+
+  <!-- Load Landline and Stateline -->
+  <script src="js/landline.js"></script>
+  <script src="js/landline.stateline.js"></script>
+  <script src="../js/landline.stateline.topline.js"></script>
+  <!--Use Mr Data Converter http://shancarter.github.io/mr-data-converter/ to swap the data you set up in template.xls into JSON- Dictionary. Paste your new data below. -->
+  <script>
+    var mapData_1 = 
+    {
+  "01": { "state":"Alabama", "category":"A", "detail1":"Status 1", "detail2":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. "},
+  "02": { "state":"Alaska", "category":"B", "detail1":"Status2", "detail2":"Integer egestas fermentum neque vitae mattis. "},
+  "04": { "state":"Arizona", "category":"C", "detail1":"Status 3", "detail2":"Fusce hendrerit ac enim a consequat. "},
+  "05": { "state":"Arkansas", "category":"A", "detail1":"Status 1", "detail2":"Vivamus porta congue posuere. "},
+  "06": { "state":"California", "category":"B", "detail1":"Status2", "detail2":"Nulla vitae odio in libero rhoncus ornare convallis non nunc. "},
+  "08": { "state":"Colorado", "category":"C", "detail1":"Status 3", "detail2":"Praesent tincidunt vestibulum lorem in convallis. "},
+  "09": { "state":"Connecticut", "category":"A", "detail1":"Status 1", "detail2":"Donec gravida nibh sapien, non pulvinar tortor tincidunt sit amet. "},
+  "10": { "state":"Delaware", "category":"B", "detail1":"Status2", "detail2":"Nulla dictum mollis nisl, eu congue elit sagittis eget. "},
+  "11": { "state":"District of Columbia", "category":"C", "detail1":"Status 3", "detail2":"Nam non neque tempor, pellentesque quam eget, hendrerit metus. "},
+  "12": { "state":"Florida", "category":"A", "detail1":"Status 1", "detail2":"Nulla in mauris euismod, consequat felis eget, interdum ligula."},
+  "13": { "state":"Georgia", "category":"B", "detail1":"Status2", "detail2":"Donec sit amet congue odio, et ultrices turpis. "},
+  "15": { "state":"Hawaii", "category":"A", "detail1":"Status 3", "detail2":"Nulla placerat justo sed magna varius efficitur. "},
+  "16": { "state":"Idaho", "category":"B", "detail1":"Status 1", "detail2":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. "},
+  "17": { "state":"Illinois", "category":"C", "detail1":"Status2", "detail2":"Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. "},
+  "18": { "state":"Indiana", "category":"A", "detail1":"Status 3", "detail2":"Duis nec maximus nisi. Praesent accumsan turpis ut fermentum porta. "},
+  "19": { "state":"Iowa", "category":"B", "detail1":"Status 1", "detail2":"Nullam convallis suscipit tellus sed ullamcorper. "},
+  "20": { "state":"Kansas", "category":"A", "detail1":"Status2", "detail2":"Vestibulum risus dolor, facilisis eget felis vel, pulvinar pharetra nibh. "},
+  "21": { "state":"Kentucky", "category":"B", "detail1":"Status 3", "detail2":"Nam sapien turpis, dapibus sit amet justo sit amet, eleifend rutrum libero. "},
+  "22": { "state":"Louisiana", "category":"C", "detail1":"Status 1", "detail2":"Aliquam ut justo ut enim ultrices porttitor. "},
+  "23": { "state":"Maine", "category":"A", "detail1":"Status2", "detail2":"Aliquam orci lectus, tempor sed tincidunt eu, congue ut libero. Ut egestas urna et sapien suscipit, euismod tincidunt mi ornare. "},
+  "24": { "state":"Maryland", "category":"B", "detail1":"Status 3", "detail2":"Sed at eros id magna varius egestas id vel sapien. "},
+  "25": { "state":"Massachusetts", "category":"C", "detail1":"Status 1", "detail2":"Curabitur diam urna, venenatis id aliquet et, malesuada nec augue. "},
+  "26": { "state":"Michigan", "category":"A", "detail1":"Status2", "detail2":"Sed maximus, justo ac faucibus pretium, nulla dolor pretium metus, consectetur maximus sem velit non elit. "},
+  "27": { "state":"Minnesota", "category":"B", "detail1":"Status 3", "detail2":"Donec consectetur velit eget rhoncus pulvinar."},
+  "28": { "state":"Mississippi", "category":"C", "detail1":"Status 1", "detail2":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. "},
+  "29": { "state":"Missouri", "category":"A", "detail1":"Status2", "detail2":"Integer egestas fermentum neque vitae mattis. "},
+  "30": { "state":"Montana", "category":"B", "detail1":"Status 3", "detail2":"Fusce hendrerit ac enim a consequat. "},
+  "31": { "state":"Nebraska", "category":"C", "detail1":"Status 1", "detail2":"Vivamus porta congue posuere. "},
+  "32": { "state":"Nevada", "category":"A", "detail1":"Status2", "detail2":"Nulla vitae odio in libero rhoncus ornare convallis non nunc. "},
+  "33": { "state":"New Hampshire", "category":"B", "detail1":"Status 3", "detail2":"Praesent tincidunt vestibulum lorem in convallis. "},
+  "34": { "state":"New Jersey", "category":"C", "detail1":"Status 1", "detail2":"Donec gravida nibh sapien, non pulvinar tortor tincidunt sit amet. "},
+  "35": { "state":"New Mexico", "category":"A", "detail1":"Status2", "detail2":"Nulla dictum mollis nisl, eu congue elit sagittis eget. "},
+  "36": { "state":"New York", "category":"B", "detail1":"Status 3", "detail2":"Nam non neque tempor, pellentesque quam eget, hendrerit metus. "},
+  "37": { "state":"North Carolina", "category":"C", "detail1":"Status 1", "detail2":"Nulla in mauris euismod, consequat felis eget, interdum ligula."},
+  "38": { "state":"North Dakota", "category":"A", "detail1":"Status2", "detail2":"Donec sit amet congue odio, et ultrices turpis. "},
+  "39": { "state":"Ohio", "category":"B", "detail1":"Status 3", "detail2":"Nulla placerat justo sed magna varius efficitur. "},
+  "40": { "state":"Oklahoma", "category":"C", "detail1":"Status 1", "detail2":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. "},
+  "41": { "state":"Oregon", "category":"A", "detail1":"Status2", "detail2":"Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. "},
+  "42": { "state":"Pennsylvania", "category":"B", "detail1":"Status 3", "detail2":"Duis nec maximus nisi. Praesent accumsan turpis ut fermentum porta. "},
+  "44": { "state":"Rhode Island", "category":"C", "detail1":"Status 1", "detail2":"Nullam convallis suscipit tellus sed ullamcorper. "},
+  "45": { "state":"South Carolina", "category":"A", "detail1":"Status2", "detail2":"Vestibulum risus dolor, facilisis eget felis vel, pulvinar pharetra nibh. "},
+  "46": { "state":"South Dakota", "category":"B", "detail1":"Status 3", "detail2":"Nam sapien turpis, dapibus sit amet justo sit amet, eleifend rutrum libero. "},
+  "47": { "state":"Tennessee", "category":"C", "detail1":"Status 1", "detail2":"Aliquam ut justo ut enim ultrices porttitor. "},
+  "48": { "state":"Texas", "category":"A", "detail1":"Status2", "detail2":"Aliquam orci lectus, tempor sed tincidunt eu, congue ut libero. Ut egestas urna et sapien suscipit, euismod tincidunt mi ornare. "},
+  "49": { "state":"Utah", "category":"B", "detail1":"Status 3", "detail2":"Sed at eros id magna varius egestas id vel sapien. "},
+  "50": { "state":"Vermont", "category":"C", "detail1":"Status 1", "detail2":"Curabitur diam urna, venenatis id aliquet et, malesuada nec augue. "},
+  "51": { "state":"Virginia", "category":"A", "detail1":"Status2", "detail2":"Sed maximus, justo ac faucibus pretium, nulla dolor pretium metus, consectetur maximus sem velit non elit. "},
+  "53": { "state":"Washington", "category":"B", "detail1":"Status 3", "detail2":"Donec consectetur velit eget rhoncus pulvinar."},
+  "54": { "state":"West Virginia", "category":"C", "detail1":"Status 1", "detail2":"Sed tincidunt, sapien vel rhoncus pulvinar, sem odio accumsan est, at aliquet nulla libero in massa. "},
+  "55": { "state":"Wisconsin", "category":"A", "detail1":"Status2", "detail2":"Phasellus iaculis nulla ut ultricies dapibus. Mauris pulvinar, orci ut feugiat faucibus, urna libero convallis felis, vitae dignissim enim dolor vitae nunc. "},
+  "56": { "state":"Wyoming", "category":"B", "detail1":"Status 3", "detail2":"Donec vestibulum consequat lectus, id commodo ligula feugiat in. Fusce eget ipsum et nulla efficitur sagittis. "}
+}
+
+
+  </script>
+
+  <body>
+
+    <div id="map-1" class="stateline-container"></div>
+
+    <script type="text/jst" id="map-1-tooltip-tmpl">
+      <h2><%= n %></h2>
+      <div class="stateline-tooltip-sub">
+        <span class="stateline-tooltip-item">Status:</span> <%= detail1 %>
+      </div>
+      <div class="stateline-tooltip-sub">
+        <span class="stateline-tooltip-item">About:</span> <%= detail2 %>
+      </div>
+    </script>
+
+    <script>
+     $('#map-1').stateline({
+       data: mapData_1,
+       tooltip: '#map-1-tooltip-tmpl',
+       legend: {
+         "A": {
+           color: "#66c2a5",
+           description: 'Category A means...'
+         },
+         "B": {
+           color: "#fc8d62",
+           description: 'Category B means...'
+         },
+         "C": {
+           color: "#8da0cb",
+           description: 'Category C means...'
+         }
+       },
+       source: '<a href="#" target="_blank">TK</a>'
+     });
+    </script>
+    
+  </body>
+</html>
