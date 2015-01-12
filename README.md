@@ -3,7 +3,7 @@ Topline
 
 A jQuery wrapper for ProPublica's [Stateline](http://propublica.github.io/landline/) library, adding some no-fuss tooltips and legends.
 
-##### [View Demo](http://ajam.github.io/topline/example/index.html)
+**[View Demo](http://ajam.github.io/topline/example/index.html)**
 
 ![](https://raw.githubusercontent.com/ajam/topline/master/assets/map.png)
 
@@ -123,6 +123,7 @@ Adding your own would look like this:
 		}
 <script>
 ````
+**[See the full example](https://github.com/ajam/topline/blob/master/example/index.html)**
 
 ### State names
 
