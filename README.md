@@ -3,6 +3,8 @@ Topline
 
 A jQuery wrapper for ProPublica's [Stateline](http://propublica.github.io/landline/) library, adding some no-fuss tooltips and legends.
 
+##### [View Demo](http://ajam.github.io/topline/example/index.html)
+
 ![](https://raw.githubusercontent.com/ajam/topline/master/assets/map.png)
 
 ### Usage
