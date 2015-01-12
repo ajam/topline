@@ -1,7 +1,7 @@
 Topline
 ===
 
-A jQuery wrapper for ProPublica's [Stateline](http://propublica.github.io/landline/) library, adding some no-fuss tooltips and legends.
+A jQuery wrapper for ProPublica's [Stateline](http://propublica.github.io/landline/) library, adding some no-fuss tooltips, legends and source lines.
 
 **[View Demo](http://ajam.github.io/topline/example/index.html)**
 
