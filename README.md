@@ -29,15 +29,6 @@ A jQuery wrapper for ProPublica's [Stateline](http://propublica.github.io/landli
 <script src="js/thirdparty/landline.stateline.js"></script>
 <script src="js/thirdparty/landline.stateline.topline.js"></script>
 
-<script>
-  var mapData_1 =  {
-	"01": { "state":"Alabama", "category":"A", "detail1":"Status 1", "detail2":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. "},
-	"02": { "state":"Alaska", "category":"B", "detail1":"Status2", "detail2":"Integer egestas fermentum neque vitae mattis. "},
-	"04": { "state":"Arizona", "category":"C", "detail1":"Status 3", "detail2":"Fusce hendrerit ac enim a consequat. "},
-	"05": { "state":"Arkansas", "category":"A", "detail1":"Status 1", "detail2":"Vivamus porta congue posuere. "}
-	// ...
-}
-
 <div id="map-1" class="stateline-container"></div>
 
 <script type="text/jst" id="map-1-tooltip-tmpl">
@@ -51,27 +42,35 @@ A jQuery wrapper for ProPublica's [Stateline](http://propublica.github.io/landli
 </script>
 
 <script>
- $('#map-1').stateline({
-   data: mapData_1,
-   tooltip: '#map-1-tooltip-tmpl',
-   tooltipWidth: 250,
-   legend: {
-     "A": {
-       color: "#66c2a5",
-       description: 'Category A means...'
-     },
-     "B": {
-       color: "#fc8d62",
-       description: 'Category B means...'
-     },
-     "C": {
-       color: "#8da0cb",
-       description: 'Category C means...'
+  var mapData_1 =  {
+	"01": { "state":"Alabama", "category":"A", "detail1":"Status 1", "detail2":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. "},
+	"02": { "state":"Alaska", "category":"B", "detail1":"Status2", "detail2":"Integer egestas fermentum neque vitae mattis. "},
+	"04": { "state":"Arizona", "category":"C", "detail1":"Status 3", "detail2":"Fusce hendrerit ac enim a consequat. "},
+	"05": { "state":"Arkansas", "category":"A", "detail1":"Status 1", "detail2":"Vivamus porta congue posuere. "}
+	// ...
+  }
+
+  $('#map-1').stateline({
+    data: mapData_1,
+    tooltip: '#map-1-tooltip-tmpl',
+    tooltipWidth: 250,
+    legend: {
+      "A": {
+        color: "#66c2a5",
+        description: 'Category A means...'
+      },
+      "B": {
+        color: "#fc8d62",
+        description: 'Category B means...'
+      },
+      "C": {
+        color: "#8da0cb",
+        description: 'Category C means...'
      }
-   },
-   source: '<a href="#" target="_blank">TK</a>'
- });
-</script>
+    },
+    source: '<a href="#" target="_blank">TK</a>'
+  });
+ </script>
 ````
 
 ### Options
